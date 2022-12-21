@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: superorbital1
+  labels:
+    org: superorbital
+spec:
+  selector:
+    matchLabels:
+      run: superorbital1
+  template:
+    metadata:
+      labels:
+        run: superorbital1
+    spec:
+      containers:
+      - image: superorbital/example:latest
+        name: superorbital
